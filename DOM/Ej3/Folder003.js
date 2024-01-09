@@ -54,6 +54,25 @@ if(titulo){
 
 //005 - Usando JavaScript, selecciona el primer elemento li y elimina su atributo data-tipo. Luego, imprime en la consola la lista de atributos restantes.
 
-//
+//En este caso no compruebo si existe dicho atributo , ya que lo comprobé en un apartado anterior, aquí simplemente llamo al primer elemento de la lista
+//y mediante el método removeAttribute, le indico el atributo a eliminar y después imprimo por consola los atributos restantes
 lista.removeAttribute('data-tipo');
-console.log('La lista de atributos restantes es: ' ,lista.attributes)
+console.log('La lista de atributos restantes es: ' ,lista.attributes);
+
+
+//006 - Usando JavaScript, selecciona el enlace (<a>) y verifica si tiene algún atributo personalizado en el dataset. 
+//Si los tiene, imprime en la consola todos los atributos personalizados presentes.
+
+
+//Comrpuebo si el enlace tiene atributos en el dataset
+if(enlace.dataset){
+//Si los tiene guardo los atributos 
+    let atributoPer=enlace.dataset;
+
+//Con un for in recorro el objeto atributoPer, mostrando el nombre del atributo y su valor de forma individual
+    for (let atributo in atributoPer) {
+        console.log('Atributo:', atributo, 'Valor:', atributoPer[atributo]);
+    }
+}else{
+    console.log('El enlace no tiene atributos personalizados en el dataset');
+}
