@@ -44,3 +44,10 @@ nombre = tabla.rows[i].cells[0].innerHTML;
 
 }
 console.log('La persona mas mayor es: '+nombre);
+
+//004 -Agrega una nueva columna al final de cada fila con el texto "Acción" y dentro de cada celda de esta columna agrega un botón con el texto "Eliminar".
+
+function eliminarFila(button) {
+    let fila = button.parentNode.parentNode; // Obtiene la fila actual
+    fila.parentNode.removeChild(fila); // Elimina la fila
+}
