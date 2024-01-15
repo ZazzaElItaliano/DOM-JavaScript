@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+   <!-- el return false dentro de la función handler no evita la redirección a la web porque se está utilizando un enlace (<a>), y el return false dentro de un manejador de eventos onclick en este caso no anula la acción predeterminada de navegación.
+
+Cuando se usa onclick en un enlace <a>, el return false generalmente solo previene el comportamiento de propagación del evento, pero no impide la acción de navegación predeterminada del enlace. -->
+    <script>
+        function handler() {
+            alert("...");
+            return false;
+        }
+        </script>
+        
+        <a href="https://w3.org" onclick="handler()">el navegador irá a w3.org</a>
+        
+        
+</body>
+</html>

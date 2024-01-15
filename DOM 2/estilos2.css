@@ -1,0 +1,30 @@
+.menus ul {
+    /*Estilos para la lista desplegable.*/
+    margin: 0;
+    list-style: none;
+    padding-left: 20px;
+    display: none;
+  }
+
+  .menus .titulo {
+    /* Estilos para el título del menú.*/
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .menus .titulo::before {
+    /*Agrega un icono de flecha antes del título del menú.*/
+    content: '▶ ';
+    font-size: 80%;
+    color: green;
+  }
+
+  .menus.open .titulo::before {
+    /*Estilos para cuando la clase 'open' está presente, indicando que el menú está desplegado.*/
+    content: '▼ ';
+  }
+
+  .menus.open ul {
+    /*Estilos para cuando la clase 'open' está presente, indicando que el menú está desplegado.*/
+    display: block;
+  }
